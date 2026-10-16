@@ -68,6 +68,7 @@ function CartDrawer({ cart, onClose, onChange, onRemove }) {
 export default function App() {
   const [cart, setCart] = useState([]);
   const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const add = product => setCart(current => {
     const found = current.find(item => item.id === product.id);
     return found ? current.map(item => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item) : [...current, { ...product, quantity: 1 }];
@@ -80,7 +81,8 @@ export default function App() {
     <div className="topbar">Envíos a toda Colombia · Atención personalizada por WhatsApp</div>
     <header>
       <a className="brand" href="#inicio"><img className="brand-logo" src="/logo.png" alt="Importaciones EBC" /><span>IMPORTACIONES EBC</span></a>
-      <nav><a href="#productos">Productos</a><a href="#categorias">Categorías</a><a href="#como-comprar">Cómo comprar</a></nav>
+      <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} onClick={() => setMenuOpen(value => !value)}><span /><span /><span /></button>
+      <nav className={menuOpen ? 'mobile-open' : ''}><a href="#productos" onClick={() => setMenuOpen(false)}>Productos</a><a href="#categorias" onClick={() => setMenuOpen(false)}>Categorías</a><a href="#como-comprar" onClick={() => setMenuOpen(false)}>Cómo comprar</a></nav>
       <button className="cart-button" onClick={() => setOpen(true)}><CartIcon />Carrito{count ? ` · ${count}` : ''}</button>
     </header>
 

@@ -24,3 +24,12 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
   header nav a:last-child { border-bottom:0; }
   .cart-button { order:3; padding:10px 12px; font-size:12px; white-space:nowrap; }
 }
+
+/* Category cards are functional filters for the demo catalog. */
+.category { border:0; text-align:left; cursor:pointer; transition:transform .2s,outline .2s; }
+.category:hover { transform:translateY(-2px); }
+.category.is-active { outline:3px solid var(--red); outline-offset:3px; }
+.cat-travel { background:linear-gradient(135deg,#4c76a8,#132747); }
+.catalog-tools { display:flex; align-items:end; gap:16px; }
+.show-all { border:1px solid var(--navy); border-radius:999px; padding:10px 15px; color:var(--navy); background:#fff; font-size:12px; font-weight:800; white-space:nowrap; }
+@media (max-width:800px) { .catalog-tools { display:block; }.show-all { margin-top:12px; } }

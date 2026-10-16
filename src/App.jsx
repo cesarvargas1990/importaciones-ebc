@@ -13,6 +13,14 @@ const products = [
   { id: 8, name: 'Gadget inteligente para casa', category: 'Tecnología', price: 219900, icon: '🏠' }
 ];
 
+const categories = [
+  ['cat-tech', 'Tecnología', 'Gadgets y accesorios'],
+  ['cat-style', 'Moda', 'Estilo para cada día'],
+  ['cat-beauty', 'Belleza', 'Cuidado personal'],
+  ['cat-home', 'Hogar', 'Soluciones prácticas'],
+  ['cat-travel', 'Viaje', 'Accesorios para moverte']
+];
+
 const money = value => new Intl.NumberFormat('es-CO', {
   style: 'currency', currency: 'COP', maximumFractionDigits: 0
 }).format(value);
@@ -69,6 +77,7 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('Todas');
   const add = product => setCart(current => {
     const found = current.find(item => item.id === product.id);
     return found ? current.map(item => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item) : [...current, { ...product, quantity: 1 }];
@@ -76,6 +85,13 @@ export default function App() {
   const change = (id, amount) => setCart(current => current.map(item => item.id === id ? { ...item, quantity: item.quantity + amount } : item).filter(item => item.quantity > 0));
   const remove = id => setCart(current => current.filter(item => item.id !== id));
   const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const visibleProducts = activeCategory === 'Todas'
+    ? products
+    : products.filter(product => product.category === activeCategory);
+  const selectCategory = category => {
+    setActiveCategory(category);
+    document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return <>
     <div className="topbar">Envíos a toda Colombia · Atención personalizada por WhatsApp</div>
@@ -89,8 +105,8 @@ export default function App() {
     <section className="hero" id="inicio"><div className="hero-content"><div className="eyebrow">Importaciones EBC · USA → Colombia</div><h1>De Estados Unidos <em>para ti.</em></h1><p className="hero-copy">Encuentra productos seleccionados, arma tu pedido y déjanos coordinar contigo por WhatsApp.</p><div className="hero-actions"><a className="primary" href="#productos">Ver productos</a><a className="secondary" href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">Hablar por WhatsApp</a></div></div></section>
 
     <main>
-      <section id="categorias"><div className="section-head"><div><p className="section-kicker">Explora</p><h2>Compra por categoría</h2></div><p className="section-note">Una selección inicial de productos de prueba para validar la experiencia de compra.</p></div><div className="category-grid">{[['cat-tech', 'Tecnología', 'Gadgets y accesorios'], ['cat-style', 'Moda', 'Estilo para cada día'], ['cat-beauty', 'Belleza', 'Cuidado personal'], ['cat-home', 'Hogar', 'Soluciones prácticas']].map(([className, title, note]) => <a className={`category ${className}`} href="#productos" key={title}><strong>{title}</strong><span>{note}</span></a>)}</div></section>
-      <section id="productos" className="products-section"><div className="section-head"><div><p className="section-kicker">Catálogo inicial</p><h2>Productos destacados</h2></div><p className="section-note">Precios de referencia. Confirma disponibilidad, envío y valor final directamente con nuestro equipo.</p></div><div className="product-grid">{products.map(product => <ProductCard key={product.id} product={product} onAdd={product => { add(product); setOpen(true); }} />)}</div></section>
+      <section id="categorias"><div className="section-head"><div><p className="section-kicker">Explora</p><h2>Compra por categoría</h2></div><p className="section-note">Cada categoría muestra los productos de prueba que le corresponden.</p></div><div className="category-grid">{categories.map(([className, title, note]) => <button className={`category ${className} ${activeCategory === title ? 'is-active' : ''}`} type="button" onClick={() => selectCategory(title)} key={title}><strong>{title}</strong><span>{note} · {products.filter(product => product.category === title).length} productos</span></button>)}</div></section>
+      <section id="productos" className="products-section"><div className="section-head"><div><p className="section-kicker">Catálogo inicial</p><h2>{activeCategory === 'Todas' ? 'Productos destacados' : activeCategory}</h2></div><div className="catalog-tools"><p className="section-note">Precios de referencia. Confirma disponibilidad, envío y valor final directamente con nuestro equipo.</p>{activeCategory !== 'Todas' && <button className="show-all" type="button" onClick={() => setActiveCategory('Todas')}>Ver todos</button>}</div></div><div className="product-grid">{visibleProducts.map(product => <ProductCard key={product.id} product={product} onAdd={product => { add(product); setOpen(true); }} />)}</div></section>
       <section className="trust" id="como-comprar">{[['✓', 'Productos seleccionados', 'Revisamos contigo la disponibilidad antes de confirmar.'], ['✈', 'Envíos a Colombia', 'Coordinamos la entrega y los detalles por WhatsApp.'], ['◉', 'Compra acompañada', 'Tu pedido se gestiona de forma directa y personalizada.']].map(([icon, title, note]) => <div className="trust-item" key={title}><div className="trust-icon">{icon}</div><b>{title}</b><span>{note}</span></div>)}</section>
       <section className="callout"><div><p className="section-kicker">¿Buscas algo específico?</p><h2>Lo importamos para ti.</h2><p>Escríbenos por WhatsApp y cuéntanos qué producto estás buscando. Te ayudamos a revisar opciones y disponibilidad.</p><a className="whatsapp" href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">◉&nbsp; Escribir por WhatsApp</a></div><div className="callout-art" /></section>
     </main>

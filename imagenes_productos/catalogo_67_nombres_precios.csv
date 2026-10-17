@@ -1,0 +1,68 @@
+indice,nombre,precio_actual,precio_anterior,descripcion,imagen_archivo,categoria,observacion,estado
+1,"Cer 100","$ 100.000,00","""","Tratamiento capilar coreano","cer_100.jpg","cuidado facial y corporal","""",CONFIRMADO
+2,"Aceite para masajes anti celulitis","$ 120.000,00","$ 150.000,00","""","catalogo_aceite_para_masajes_anticelulitis.jpg","cuidado facial y corporal","""",CONFIRMADO
+3,"Organic spirulina 500 und","$ 200.000,00","""","""","organic_spirulina_500_und.jpg","vitaminas","""",CONFIRMADO
+4,"Vaseline cocoa radiant 600 ml","$ 100.000,00","$ 130.000,00","""","vaseline_cocoa_radiant_600ml.jpg","vaseline","""",CONFIRMADO
+5,"Ariana grande body mist x 4 mini","$ 200.000,00","""","60.000 unidad","ariana_grande_body_mist_x4_mini.jpg","Arianna Grande","""",CONFIRMADO
+6,"Aceite corporal coconut - PINK","$ 90.000,00","""","""","aceite_corporal_coconut_pink.jpg","victoria secret - PINK","""",CONFIRMADO
+7,"Body misty bath and body","$ 95.000,00","""","""","body_misty_bath_and_body.jpg","bath and body works","""",CONFIRMADO
+8,"SNTE aceite capilar romero","$ 50.000,00","$ 75.000,00","""","snte_aceite_capilar_romero.jpg","cuidado facial y corporal","""",CONFIRMADO
+9,"Vaseline body cream","$ 50.000,00","""","""","vaseline_body_cream.jpg","vaseline","""",CONFIRMADO
+10,"Vinagre de manzana en pastillas 100 und","$ 110.000,00","""","""","vinagre_manzana_pastillas_100_und.jpg","vitaminas","""",CONFIRMADO
+11,"Lip gloss Victoria secret","$ 60.000,00","""","""","lip_gloss_victoria_secret_60.jpg","victoria secret - PINK","""",CONFIRMADO
+12,"Tree hut exfoliante corporal","$ 75.000,00","""","""","catalogo_tree_hut_exfoliante_corporal.jpg","cuidado facial y corporal","""",CONFIRMADO
+13,"Cabello , piel y uñas 180 gomas","$ 200.000,00","""","""","NO ENCONTRADO","vitaminas","No se encontró un archivo de imagen con nombre o evidencia inequívoca para esta ficha.",CONFIRMADO
+14,"iPhone 18 pro y 18 pro max","$ 0,00","""","""","iphone_18_pro_y_18_pro_max.jpg","iphone","""",CONFIRMADO
+15,"Body misty Victoria secret","$ 90.000,00","""","""","catalogo_24_body_misty_victoria_secret.jpg","victoria secret - PINK","""",CONFIRMADO
+16,"Omega 3 - 60 und","$ 120.000,00","""","""","catalogo_25_omega_3_60_und.jpg","vitaminas","""",CONFIRMADO
+17,"Lip gloss Victoria secret","$ 75.000,00","""","""","lip_gloss_victoria_secret_75.jpg","victoria secret - PINK","""",CONFIRMADO
+18,"Body mist Arianna grande cloud","$ 90.000,00","""","""","body_mist_arianna_grande_cloud.jpg","Arianna Grande","""",CONFIRMADO
+19,"Crema corporal bath and body works","$ 50.000,00","""","""","crema_corporal_bath_and_body.jpg","bath and body works","""",CONFIRMADO
+20,"Aceite corporal truly","$ 200.000,00","""","""","catalogo_26_aceite_corporal_truly.jpg","cuidado facial y corporal","""",CONFIRMADO
+21,"Collagen","$ 200.000,00","$ 220.000,00","""","collagen.jpg","vitaminas","""",CONFIRMADO
+22,"Jabón corporal EOS","$ 85.000,00","""","""","catalogo_28_jabon_corporal_eos.jpg","EOS","""",CONFIRMADO
+23,"Set x3 gloss mini kiko milano","$ 170.000,00","""","""","set_x3_gloss_mini_kiko_milano.jpg","kiko milano","""",CONFIRMADO
+24,"Precios IPhone 18 pro y 18 pro Max","$ 0,00","""","""","catalogo_precios_iphone_18_pro_y_18_pro_max.jpg","iphone","""",CONFIRMADO
+25,"Fish oil pastillas - 134 und","$ 150.000,00","$ 170.000,00","""","fish_oil_134_und.jpg","vitaminas","""",CONFIRMADO
+26,"Vitamina c en gomas - 60 und","$ 130.000,00","""","""","catalogo_31_vitamina_c_gomas_60.jpg","vitaminas","""",CONFIRMADO
+27,"Vaseline cocoa glow 400 ml","$ 85.000,00","""","""","catalogo_32_vaseline_cocoa_glow_400ml.jpg","vaseline","""",CONFIRMADO
+28,"Vaseline cocoa radiant 200 ml","$ 80.000,00","""","""","catalogo_33_vaseline_cocoa_radiant_200ml.jpg","vaseline","""",CONFIRMADO
+29,"Vaseline cocoa radiant 60 ml","$ 40.000,00","""","""","catalogo_34_vaseline_cocoa_radiant_60ml.jpg","vaseline","""",CONFIRMADO
+30,"Body misty bath and body","$ 95.000,00","""","""","catalogo_35_body_misty_bath_and_body_1.jpg","bath and body works","""",CONFIRMADO
+31,"Body misty bath and body","$ 95.000,00","""","""","catalogo_36_body_misty_bath_and_body_2.jpg","bath and body works","""",CONFIRMADO
+32,"Omega 3 - fish oil 100 und","$ 120.000,00","""","""","catalogo_37_omega_3_fish_oil_100_und.jpg","vitaminas","""",CONFIRMADO
+33,"Body misty bath and body","$ 95.000,00","""","""","catalogo_38_body_misty_bath_and_body_3.jpg","bath and body works","""",CONFIRMADO
+34,"Hierro - 200 und","$ 80.000,00","""","""","catalogo_39_hierro_200_und.jpg","vitaminas","""",CONFIRMADO
+35,"Vitamina líquida para mujer","$ 200.000,00","""","""","catalogo_40_vitamina_liquida_mujer.jpg","vitaminas","""",CONFIRMADO
+36,"Body misty bath and body","$ 95.000,00","$ 100.000,00","""","catalogo_41_body_misty_bath_and_body_4.jpg","bath and body works","""",CONFIRMADO
+37,"Collagen peptides","$ 195.000,00","$ 230.000,00","""","collagen_peptides.jpg","vitaminas","""",CONFIRMADO
+38,"Crema corporal EOS","$ 90.000,00","""","""","catalogo_49_crema_corporal_eos_2.jpg","EOS","""",CONFIRMADO
+39,"Pastillas anti acidez","$ 75.000,00","""","""","catalogo_43_pastillas_anti_acidez.jpg","vitaminas","""",CONFIRMADO
+40,"Lip gloss Victoria secret","$ 60.000,00","""","""","lip_gloss_victoria_secret_3.jpg","victoria secret - PINK","""",CONFIRMADO
+41,"Colágeno , retinol y ácido hialuronico","$ 140.000,00","""","""","catalogo_44_colageno_retinol_acido_hialuronico.jpg","vitaminas","""",CONFIRMADO
+42,"Cabello, piel y uñas 90 gomas","$ 120.000,00","""","""","catalogo_45_cabello_piel_unas_90_1.jpg","vitaminas","""",CONFIRMADO
+43,"Citrato de zinc 60 tabletas","$ 70.000,00","""","""","catalogo_46_citrato_zinc_60_tabletas.jpg","vitaminas","""",CONFIRMADO
+44,"Vaseline en barra Cocoa shimmer","$ 75.000,00","""","""","catalogo_47_vaseline_barra_cocoa_shimmer.jpg","vaseline","""",CONFIRMADO
+45,"Aceite capilar Jamaican black castor 75 ml","$ 50.000,00","""","""","catalogo_48_aceite_capilar_jamaican_black_castor_75ml.jpg","cuidado facial y corporal","""",CONFIRMADO
+46,"Crema corporal EOS","$ 90.000,00","$ 90.000,00","""","crema_corporal_eos.jpg","EOS","""",CONFIRMADO
+47,"Tónico capilar rapunzel","$ 100.000,00","""","""","catalogo_50_tonico_capilar_rapunzel.jpg","cuidado facial y corporal","""",CONFIRMADO
+48,"Body misty Victoria secret","$ 90.000,00","""","""","catalogo_51_body_misty_victoria_secret_2.jpg","victoria secret - PINK","""",CONFIRMADO
+49,"Cabello , piel y uñas 80 gomas","$ 130.000,00","""","""","catalogo_52_cabello_piel_unas_80.jpg","vitaminas","""",CONFIRMADO
+50,"Vaseline original","$ 75.000,00","""","""","vaseline_original.jpg","vaseline","""",CONFIRMADO
+51,"Jabón íntimo vagiisl","$ 65.000,00","""","""","catalogo_53_jabon_intimo_vagiisl_2.jpg","cuidado facial y corporal","""",CONFIRMADO
+52,"Bálsamo labial EOS unidad","$ 30.000,00","""","""","catalogo_54_balsamo_labial_eos_2.jpg","EOS","""",CONFIRMADO
+53,"The ordinary","$ 50.000,00","""","""","catalogo_55_the_ordinary.jpg","cuidado facial y corporal","""",CONFIRMADO
+54,"Vaseline shimmering body oil","$ 85.000,00","""","""","catalogo_56_vaseline_shimmering_body_oil.jpg","vaseline","""",CONFIRMADO
+55,"Body misty bath and body","$ 50.000,00","""","""","catalogo_57_body_misty_bath_and_body_5.jpg","bath and body works","""",CONFIRMADO
+56,"Biotina 120 pastillas","$ 90.000,00","""","""","catalogo_58_biotina_120_pastillas.jpg","vitaminas","""",CONFIRMADO
+57,"D3 + k2","$ 135.000,00","""","""","catalogo_59_d3_k2.jpg","vitaminas","""",CONFIRMADO
+58,"Body misty bath and body","$ 95.000,00","""","""","catalogo_60_body_misty_bath_and_body_6.jpg","bath and body works","""",CONFIRMADO
+59,"Stop chafe","$ 65.000,00","$ 65.000,00","Evita rozaduras por fricción","catalogo_61_stop_chafe.jpg","cuidado facial y corporal","""",CONFIRMADO
+60,"Body mist EOS","$ 90.000,00","""","""","body_mist_eos.jpg","EOS","""",CONFIRMADO
+61,"Body misty Victoria secret","$ 90.000,00","""","""","catalogo_62_body_misty_victoria_secret_3.jpg","victoria secret - PINK","""",CONFIRMADO
+62,"Body misty Victoria secret","$ 90.000,00","""","""","catalogo_63_body_misty_victoria_secret_4.jpg","victoria secret - PINK","""",CONFIRMADO
+63,"Body misty Victoria secret","$ 90.000,00","""","""","catalogo_64_body_misty_victoria_secret_5.jpg","victoria secret - PINK","""",CONFIRMADO
+64,"Magnesio 250 pastillas","$ 150.000,00","""","""","catalogo_65_magnesio_250_pastillas.jpg","vitaminas","""",CONFIRMADO
+65,"Cabello, piel y uñas 90 gomas","$ 130.000,00","""","""","catalogo_66_cabello_piel_unas_90_2.jpg","vitaminas","""",CONFIRMADO
+66,"Biotina 150 cápsulas","$ 80.000,00","""","""","catalogo_67_biotina_150_capsulas.jpg","vitaminas","""",CONFIRMADO
+67,"Lip gloss Victoria secret","$ 60.000,00","""","""","lip_gloss_victoria_secret_3.jpg","victoria secret - PINK","Imagen compartida con otra ficha del mismo producto por falta de una cuarta variante descargada.",CONFIRMADO

@@ -35,7 +35,7 @@ function whatsappUrl(items) {
 function ProductCard({ product, onAdd }) {
   return (
     <article className="product">
-      <div className="product-art">{product.icon}<span>PRUEBA</span></div>
+      <div className="product-art">{product.icon}</div>
       <div className="product-body">
         <div className="product-category">{product.category}</div>
         <h3>{product.name}</h3>
@@ -73,7 +73,7 @@ function CartDrawer({ cart, onClose, onChange, onRemove }) {
   );
 }
 
-export default function App() {
+export function LegacyApp() {
   const [cart, setCart] = useState([]);
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -96,7 +96,7 @@ export default function App() {
   return <>
     <div className="topbar">Envíos a toda Colombia · Atención personalizada por WhatsApp</div>
     <header>
-      <a className="brand" href="#inicio"><img className="brand-logo" src="/logo.png" alt="Importaciones EBC" /><span>IMPORTACIONES EBC</span></a>
+      <a className="brand" href="#inicio"><img className="brand-logo" src="/logo.webp" alt="Importaciones EBC" /><span>IMPORTACIONES EBC</span></a>
       <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} onClick={() => setMenuOpen(value => !value)}><span /><span /><span /></button>
       <nav className={menuOpen ? 'mobile-open' : ''}><a href="#productos" onClick={() => setMenuOpen(false)}>Productos</a><a href="#categorias" onClick={() => setMenuOpen(false)}>Categorías</a><a href="#como-comprar" onClick={() => setMenuOpen(false)}>Cómo comprar</a></nav>
       <button className="cart-button" onClick={() => setOpen(true)}><CartIcon />Carrito{count ? ` · ${count}` : ''}</button>
@@ -114,3 +114,5 @@ export default function App() {
     {open && <CartDrawer cart={cart} onClose={() => setOpen(false)} onChange={change} onRemove={remove} />}
   </>;
 }
+
+export { default } from './Storefront.jsx';

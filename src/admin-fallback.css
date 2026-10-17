@@ -1,0 +1,18 @@
+.admin-row .admin-fallback-image {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 54px;
+  margin-top: 0;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #edf4ff, #f9e8df);
+  color: #152542;
+  font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .admin-row .admin-fallback-image {
+    width: 48px;
+    height: 48px;
+  }
+}

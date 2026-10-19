@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Arquitectura actual de Importaciones EBC",
+    "output": "architecture-ebc.html",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "storefront-path",
+        "label": "Tienda pública",
+        "focus": ["browser", "storefront", "edge", "backend", "tenant", "db", "uploads"],
+        "note": "El dominio público resuelve la tienda y entrega únicamente el catálogo público."
+      },
+      {
+        "id": "store-admin-path",
+        "label": "Administración de tienda",
+        "focus": ["browser", "storeAdmin", "edge", "backend", "tenant", "db", "uploads"],
+        "note": "El panel de la tienda usa sesión y opera sobre los datos de su propio storeId."
+      },
+      {
+        "id": "master-path",
+        "label": "Superadministración",
+        "focus": ["browser", "masterAdmin", "edge", "backend", "tenant", "db"],
+        "note": "El panel central administra las tiendas disponibles desde el backend compartido."
+      }
+    ]
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [40, 80],
+    "cols": 4,
+    "gapX": 46,
+    "gapY": 62,
+    "cellW": 190,
+    "cellH": 86
+  },
+  "components": [
+    {
+      "id": "browser",
+      "type": "external",
+      "label": "Navegador del usuario",
+      "sublabel": "HTTPS / Firefox, Chrome o móvil",
+      "pos": [40, 310],
+      "size": [190, 70]
+    },
+    {
+      "id": "storefront",
+      "type": "frontend",
+      "label": "Frontend tienda pública",
+      "sublabel": "importacionesebc.store",
+      "tag": "React + Vite",
+      "pos": [300, 150],
+      "size": [190, 78]
+    },
+    {
+      "id": "storeAdmin",
+      "type": "frontend",
+      "label": "Panel de tienda",
+      "sublabel": "/admin · sesión store_admin",
+      "tag": "React + CRUD",
+      "pos": [300, 300],
+      "size": [190, 78]
+    },
+    {
+      "id": "masterAdmin",
+      "type": "frontend",
+      "label": "Superadmin central",
+      "sublabel": "cesarvargas.tech/storeadmin",
+      "tag": "Master + todas las tiendas",
+      "pos": [300, 450],
+      "size": [190, 78]
+    },
+    {
+      "id": "edge",
+      "type": "cloud",
+      "label": "Dominio / proxy HTTPS",
+      "sublabel": "dominios de tienda y master",
+      "tag": "Nginx :443",
+      "pos": [560, 300],
+      "size": [200, 78]
+    },
+    {
+      "id": "backend",
+      "type": "backend",
+      "label": "Stores Admin API",
+      "sublabel": "Docker · Node.js :3030",
+      "tag": "API pública + API admin",
+      "pos": [830, 300],
+      "size": [200, 78]
+    },
+    {
+      "id": "tenant",
+      "type": "security",
+      "label": "Resolución de tienda",
+      "sublabel": "stores.origin → storeId",
+      "tag": "Aislamiento por dominio y permisos",
+      "pos": [830, 150],
+      "size": [200, 78]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "PostgreSQL",
+      "sublabel": "stores, users, settings, catálogo",
+      "tag": "Docker volume",
+      "pos": [1100, 300],
+      "size": [190, 78]
+    },
+    {
+      "id": "uploads",
+      "type": "cloud",
+      "label": "Volumen de imágenes",
+      "sublabel": "/storeadmin/uploads",
+      "tag": "WebP público",
+      "pos": [1100, 450],
+      "size": [190, 78]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Servidor remoto cvargas · Docker Compose",
+      "wraps": ["edge", "backend", "tenant", "db", "uploads"],
+      "pad": 28
+    },
+    {
+      "kind": "security-group",
+      "label": "Datos y administración protegidos",
+      "wraps": ["backend", "tenant", "db"],
+      "pad": 20
+    }
+  ],
+  "connections": [
+    {
+      "id": "browser-to-storefront",
+      "from": "browser",
+      "to": "storefront",
+      "label": "HTTPS · assets dist",
+      "variant": "emphasis"
+    },
+    {
+      "id": "browser-to-storeadmin",
+      "from": "browser",
+      "to": "storeAdmin",
+      "label": "HTTPS · /admin",
+      "labelAt": [160, 405]
+    },
+    {
+      "id": "browser-to-master",
+      "from": "browser",
+      "to": "masterAdmin",
+      "label": "HTTPS · /storeadmin"
+    },
+    {
+      "id": "storefront-to-edge",
+      "from": "storefront",
+      "to": "edge",
+      "label": "GET /storeadmin/api/public/catalog",
+      "variant": "emphasis"
+    },
+    {
+      "id": "storeadmin-to-edge",
+      "from": "storeAdmin",
+      "to": "edge",
+      "label": "cookie stores_session",
+      "variant": "security",
+      "labelAt": [390, 405]
+    },
+    {
+      "id": "master-to-edge",
+      "from": "masterAdmin",
+      "to": "edge",
+      "label": "cookie stores_session",
+      "variant": "security"
+    },
+    {
+      "id": "edge-to-backend",
+      "from": "edge",
+      "to": "backend",
+      "label": "proxy HTTPS → :3030",
+      "labelDy": -33
+    },
+    {
+      "id": "backend-to-tenant",
+      "from": "backend",
+      "to": "tenant",
+      "label": "resolver dominio / Origin",
+      "variant": "security",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "tenant-to-db",
+      "from": "tenant",
+      "to": "db",
+      "label": "storeId + origin"
+    },
+    {
+      "id": "backend-to-db",
+      "from": "backend",
+      "to": "db",
+      "label": "PostgreSQL · CRUD",
+      "labelAt": [1065, 405]
+    },
+    {
+      "id": "backend-to-uploads",
+      "from": "backend",
+      "to": "uploads",
+      "label": "imágenes WebP",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Tienda pública",
+      "items": [
+        "El dominio resuelve la tienda sin API key en el frontend",
+        "El catálogo público filtra productos y categorías activos"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Administración",
+      "items": [
+        "Panel de tienda con sesión y alcance por storeId",
+        "Superadmin central con acceso master a las tiendas"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Separación de seguridad",
+      "items": [
+        "API key retirada del catálogo público",
+        "La autorización administrativa continúa en backend"
+      ]
+    }
+  ]
+}

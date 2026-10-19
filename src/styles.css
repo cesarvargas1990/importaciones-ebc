@@ -93,3 +93,148 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
 .skeleton-line.short { width:40%; }
 @keyframes skeleton-shimmer { from { background-position:200% 0; } to { background-position:-200% 0; } }
 @media (max-width:800px) { .catalog-loading { padding-top:38px; } .skeleton-categories,.skeleton-products { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; } .skeleton-category { height:130px; } .skeleton-image { height:150px; } }
+
+/* Override final del panel administrativo: la sidebar usa el mismo tono claro del top. */
+.admin-sidebar,
+.admin-sidebar.is-open {
+  background: #fff !important;
+  color: #142f5a !important;
+  border-right-color: #dfe7f2 !important;
+}
+
+.admin-brand { color: #142f5a !important; }
+
+.admin-sidebar button,
+.admin-sidebar .admin-back {
+  color: #304b70 !important;
+}
+
+.admin-sidebar button:hover,
+.admin-sidebar button.active {
+  background: #e7f0ff !important;
+  color: #0c5bdc !important;
+}
+
+.admin-sidebar small {
+  color: #1764d3 !important;
+  background: #deebff !important;
+}
+
+.admin-sidebar .admin-sidebar-logout {
+  margin-top: auto;
+  color: #c62835 !important;
+  background: #fff0f1 !important;
+}
+
+.admin-sidebar .admin-sidebar-logout:hover {
+  color: #a51f2b !important;
+  background: #ffe1e4 !important;
+}
+
+/* Hamburguesa móvil: control compacto y visible sobre el header claro. */
+@media (max-width: 800px) {
+  .admin-menu-toggle,
+  .admin-menu-toggle.is-open {
+    width: 44px !important;
+    height: 44px !important;
+    padding: 8px !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .admin-menu-toggle span,
+  .admin-menu-toggle.is-open span {
+    display: block !important;
+    width: 24px !important;
+    height: 3px !important;
+    margin: 3px 0 !important;
+    border-radius: 3px !important;
+    background: #123563 !important;
+  }
+}
+
+/* Refinamiento móvil de listados: más información visible sin perder comodidad. */
+@media (max-width: 800px) {
+  .admin-main {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .admin-top {
+    padding: 20px 18px !important;
+    margin-bottom: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  .admin-top h1 {
+    font-size: 30px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .admin-hero-copy {
+    font-size: 14px !important;
+  }
+
+  .admin-toolbar {
+    margin-bottom: 14px !important;
+  }
+
+  .admin-table-tools {
+    padding: 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .admin-catalog-list {
+    gap: 10px !important;
+  }
+
+  .admin-catalog-list .admin-row {
+    grid-template-columns: 104px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    padding: 14px !important;
+    border-radius: 17px !important;
+  }
+
+  .admin-catalog-list .admin-row img,
+  .admin-catalog-list .admin-row .admin-fallback-image {
+    width: 104px !important;
+    height: 104px !important;
+    border-radius: 14px !important;
+  }
+
+  .admin-catalog-list .admin-row-main strong,
+  .admin-catalog-list .admin-category-link {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+  }
+
+  .admin-catalog-list .admin-row-main span {
+    margin-top: 5px !important;
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+  }
+
+  .admin-catalog-list .admin-row > em {
+    grid-column: 2 !important;
+    justify-self: start !important;
+  }
+
+  .admin-catalog-list .admin-row-actions {
+    gap: 10px !important;
+    margin-top: 2px !important;
+  }
+
+  .admin-catalog-list .admin-row-actions button {
+    min-height: 46px !important;
+    padding: 9px 12px !important;
+    font-size: 14px !important;
+  }
+
+  .active-pill,
+  .off-pill {
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+  }
+}

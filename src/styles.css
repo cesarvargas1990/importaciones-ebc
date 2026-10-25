@@ -20,6 +20,7 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
 .brand-card { min-height:118px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; padding:14px 9px; border:1px solid rgba(16,42,76,.08); border-radius:16px; background:#fff; color:var(--navy); box-shadow:0 8px 20px rgba(7,27,58,.06); transition:transform .18s,box-shadow .18s,border-color .18s; }
 .brand-card:hover,.brand-card:focus-visible { transform:translateY(-3px); border-color:#b8cce8; box-shadow:0 14px 26px rgba(7,27,58,.12); outline:none; }
 .brand-monogram { display:grid; place-items:center; width:42px; height:42px; border-radius:50%; background:linear-gradient(145deg,#edf4ff,#d7e7fb); color:#173f79; font-size:13px; font-weight:900; letter-spacing:-.04em; }
+.brand-image { width:58px; height:48px; object-fit:contain; border-radius:10px; background:#f7f9fc; padding:4px; }
 .brand-card strong { font-size:12px; text-align:center; line-height:1.1; }
 .brand-card small { color:#718096; font-size:10px; }
 .category-grid { gap:18px; }

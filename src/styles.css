@@ -199,6 +199,10 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
 .hero-benefits > div { display:flex; align-items:center; justify-content:center; gap:14px; min-width:0; min-height:58px; padding:0 24px; border-right:1px solid rgba(255,255,255,.35); box-sizing:border-box; }
 .hero-benefits > div:last-child { border-right:0; }
 .hero-benefits strong { color:#ffd21a; font-size:34px; line-height:1; font-family:Arial,sans-serif; font-weight:900; }
+.hero-benefits strong .benefit-icon,
+.hero-benefits strong.benefit-whatsapp svg { display:block; width:30px; height:30px; flex:0 0 30px; }
+.hero-benefits strong .benefit-icon { fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.hero-benefits strong.benefit-whatsapp svg { fill:currentColor; }
 .hero-benefits span { min-width:0; font-size:15px; line-height:1.2; font-weight:900; }
 .hero-benefits small { color:#d9e6f7; font-size:12px; font-weight:500; }
 .hero h1 em { color:#ffd21a; font-style:normal; }

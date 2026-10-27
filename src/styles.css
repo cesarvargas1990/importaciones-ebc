@@ -782,9 +782,9 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
   }
 }
 
-/* Keep compact catalog controls in the mobile header flow, below product search. */
+/* Keep compact catalog controls in flow above the mobile product list. */
 @media (max-width: 800px) {
-  header .mobile-header-toolbar-proxy {
+  #productos .mobile-header-toolbar-proxy {
     position: static !important;
     z-index: auto !important;
     order: 5 !important;

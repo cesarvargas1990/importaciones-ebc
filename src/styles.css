@@ -828,3 +828,5 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
 .footer-social:hover { color:#fff; }
 .footer-icon { display:block; width:20px; height:20px; flex:0 0 20px; }
 .footer-location strong { display:inline-flex; align-items:center; gap:8px; }
+.footer-location a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.footer-location a:hover { color:#fff; }

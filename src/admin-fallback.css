@@ -1493,3 +1493,11 @@
     width: auto;
   }
 }
+
+.settings-map-config { display:flex; flex-direction:column; gap:9px; }
+.settings-map-config > label { display:flex; flex-direction:column; gap:5px; color:var(--text-primary); font-size:13px; font-weight:600; }
+.settings-map-config input { width:100%; min-height:42px; padding:10px 12px; border:1px solid var(--border); border-radius:9px; background:#fbfcfe; }
+.settings-map-config small { color:var(--text-secondary); line-height:1.5; }
+.settings-map-actions { display:flex; flex-wrap:wrap; gap:8px; }
+.settings-map-actions .admin-secondary { display:inline-flex; align-items:center; justify-content:center; min-height:38px; padding:8px 12px; border:0; border-radius:9px; color:var(--text-primary); font:inherit; text-decoration:none; cursor:pointer; }
+.settings-map-actions button:disabled { opacity:.5; cursor:not-allowed; }

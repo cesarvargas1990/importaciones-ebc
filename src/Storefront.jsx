@@ -95,7 +95,7 @@ function MobileToolbarProxy() {
     };
   }, []);
   if (!visible) return null;
-  return createPortal(<div className="mobile-header-toolbar mobile-header-toolbar-proxy"><button type="button" onClick={() => document.querySelector('.catalog-layout .mobile-filter-toggle')?.click()}>Filtros <b>+</b></button><label className="mobile-proxy-sort"><span>Ordenar por</span><select defaultValue="relevance" onChange={event => { const target = document.querySelector('.catalog-layout .catalog-sort select'); if (target) { target.value = event.target.value; target.dispatchEvent(new Event('change', { bubbles: true })); } }}><option value="relevance">Relevancia</option><option value="price-asc">Precio menor</option><option value="price-desc">Precio mayor</option></select><b>+</b></label></div>, document.body);
+  return createPortal(<div className="mobile-header-toolbar mobile-header-toolbar-proxy"><button type="button" onClick={() => document.querySelector('.catalog-layout .mobile-filter-toggle')?.click()}>Filtros <b>+</b></button><label className="mobile-proxy-sort"><span>Ordenar por</span><select defaultValue="relevance" onChange={event => { const target = document.querySelector('.catalog-layout .catalog-sort select'); if (target) { target.value = event.target.value; target.dispatchEvent(new Event('change', { bubbles: true })); } }}><option value="relevance">Relevancia</option><option value="price-asc">Precio menor</option><option value="price-desc">Precio mayor</option></select><b>+</b></label></div>, document.querySelector('header'));
 }
 
 function CatalogSkeleton() {

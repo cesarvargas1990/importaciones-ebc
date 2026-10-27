@@ -782,14 +782,14 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
   }
 }
 
-/* Keep the mobile catalog controls out of the header flow to prevent layout jumps. */
+/* Place mobile catalog controls directly below the search block without resizing the header. */
 @media (max-width: 700px) {
-  .mobile-header-toolbar-proxy {
-    position: fixed !important;
-    top: calc(138px + env(safe-area-inset-top)) !important;
+  header .mobile-header-toolbar-proxy {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
     left: 4vw !important;
     right: 4vw !important;
-    z-index: 45 !important;
+    z-index: 25 !important;
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
     width: auto !important;

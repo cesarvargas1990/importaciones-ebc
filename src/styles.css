@@ -782,9 +782,11 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
   }
 }
 
-/* Keep compact catalog controls in flow above the mobile product list. */
+/* Keep the mobile controls in the header and reveal them at the catalog section. */
 @media (max-width: 800px) {
-  #productos .mobile-header-toolbar-proxy {
+  header .mobile-header-toolbar-proxy {
+    visibility: hidden;
+    pointer-events: none;
     position: static !important;
     z-index: auto !important;
     order: 5 !important;
@@ -805,6 +807,11 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
     border-radius: 12px !important;
     font-size: 13px !important;
     box-shadow: none !important;
+  }
+
+  header.catalog-tools-visible .mobile-header-toolbar-proxy {
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .mobile-header-toolbar-proxy b {

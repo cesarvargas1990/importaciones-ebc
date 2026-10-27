@@ -489,3 +489,40 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
   .mobile-header-toolbar-proxy > button::after,
   .mobile-header-toolbar-proxy .mobile-proxy-sort::after { content:''; display:block; flex:0 0 18px; width:18px; height:18px; }
 }
+
+@media (max-width:600px) {
+  .topbar {
+    padding: 8px 12px;
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: .06em;
+    white-space: normal;
+  }
+
+  .topbar-marquee {
+    display: block;
+    min-width: 0;
+    padding-left: 0;
+    animation: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: .1em;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 9.5vw, 38px);
+    line-height: .98;
+    letter-spacing: -.06em;
+  }
+
+  .hero-copy {
+    font-size: clamp(15px, 4vw, 16px);
+    line-height: 1.5;
+  }
+}

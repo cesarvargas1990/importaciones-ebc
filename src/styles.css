@@ -784,6 +784,10 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
 
 /* Keep the mobile controls in the header and reveal them at the catalog section. */
 @media (max-width: 800px) {
+  header {
+    background: #fff !important;
+  }
+
   header .mobile-header-toolbar-proxy {
     visibility: hidden;
     pointer-events: none;
@@ -792,7 +796,6 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
     z-index: auto !important;
     order: 5 !important;
     flex: 0 0 100% !important;
-    display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
     gap: 8px !important;
     width: 100% !important;

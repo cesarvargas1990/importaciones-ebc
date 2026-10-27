@@ -525,4 +525,8 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
     font-size: clamp(15px, 4vw, 16px);
     line-height: 1.5;
   }
+
+  .hero-content {
+    padding-bottom: 118px;
+  }
 }

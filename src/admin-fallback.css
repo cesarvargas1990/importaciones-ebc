@@ -35,6 +35,34 @@
   border: 1px solid #e1e8f0;
   border-radius: 14px;
 }
+.admin-catalog-list .admin-row img.admin-brand-logo {
+  object-fit: contain !important;
+  padding: 8px !important;
+  background: #fff !important;
+}
+.admin-row .admin-brand-monogram {
+  width: 62px;
+  height: 62px;
+  font-size: 18px;
+}
+.admin-brand-current {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #52617a;
+  font-size: 13px;
+  font-weight: 700;
+}
+.admin-brand-current .admin-brand-logo,
+.admin-brand-current .admin-brand-monogram {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: contain;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #dfe5ed;
+}
 
 .admin-search {
   flex: 1 1 280px;

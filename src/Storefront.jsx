@@ -85,9 +85,9 @@ function MobileToolbarProxy() {
           return;
         }
         const bounds = section.getBoundingClientRect();
-        const headerHeight = header.getBoundingClientRect().height;
+        const headerHeight = header.getBoundingClientRect().height - (visible ? 48 : 0);
         const next = visible
-          ? bounds.bottom > headerHeight + 16
+          ? bounds.top <= headerHeight + 80 && bounds.bottom > headerHeight + 16
           : bounds.top <= headerHeight + 40 && bounds.bottom > headerHeight + 40;
         if (next !== visible) {
           visible = next;

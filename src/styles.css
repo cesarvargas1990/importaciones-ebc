@@ -550,9 +550,9 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
     margin-bottom: -104px;
     padding: 14px 5vw;
     gap: clamp(16px, 2vw, 30px);
-    background: rgba(5, 23, 53, .56);
-    border-bottom: 1px solid rgba(255, 255, 255, .14);
-    backdrop-filter: blur(10px);
+    background: transparent;
+    border-bottom: 0;
+    backdrop-filter: none;
   }
 
   .brand {
@@ -659,29 +659,14 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
 
   .hero-content {
     justify-self: start;
-    width: min(100%, 700px);
-    max-width: 700px;
+    width: min(100%, 780px);
+    max-width: 780px;
     margin-top: 48px;
     padding: 0 5vw;
   }
 
-  .hero .eyebrow {
-    font-size: 11px;
-    letter-spacing: .2em;
-  }
-
-  .hero h1 {
-    max-width: 620px;
-    margin: 16px 0 20px;
-    font-size: clamp(56px, 5.2vw, 84px);
-    line-height: .92;
-    letter-spacing: -.065em;
-  }
-
   .hero-copy {
     max-width: 470px;
-    font-size: 18px;
-    line-height: 1.45;
   }
 
   .hero-actions {

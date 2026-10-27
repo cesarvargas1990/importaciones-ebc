@@ -777,3 +777,9 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
     fill: currentColor;
   }
 }
+
+@media (min-width: 1600px) {
+  header .header-search {
+    transform: translateX(-clamp(0px, calc(10vw - 80px), 160px));
+  }
+}

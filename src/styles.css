@@ -823,3 +823,6 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
     font-size: 18px !important;
   }
 }
+
+.footer-social { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.footer-social:hover { color: #fff; }

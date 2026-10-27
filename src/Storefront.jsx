@@ -71,33 +71,8 @@ function Storefront() { const [catalog, setCatalog] = useState(fallback); const 
 export default function App() { const isAdmin = window.location.pathname === '/admin' || window.location.pathname.startsWith('/admin/'); return isAdmin ? <AdminApp /> : <><Storefront /><MobileToolbarProxy /></>; }
 
 function MobileToolbarProxy() {
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const section = document.getElementById('productos');
-    if (!section) return undefined;
-    let frame = 0;
-    const update = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const bounds = section.getBoundingClientRect();
-        setVisible(current => current
-          ? bounds.bottom > 140 && bounds.top < window.innerHeight
-          : bounds.top < window.innerHeight * 0.82 && bounds.bottom > 140);
-      });
-    };
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener('scroll', update);
-      window.removeEventListener('resize', update);
-    };
-  }, []);
-  if (!visible) return null;
   return createPortal(<div className="mobile-header-toolbar mobile-header-toolbar-proxy"><button type="button" onClick={() => document.querySelector('.catalog-layout .mobile-filter-toggle')?.click()}>Filtros <b>+</b></button><label className="mobile-proxy-sort"><span>Ordenar por</span><select defaultValue="relevance" onChange={event => { const target = document.querySelector('.catalog-layout .catalog-sort select'); if (target) { target.value = event.target.value; target.dispatchEvent(new Event('change', { bubbles: true })); } }}><option value="relevance">Relevancia</option><option value="price-asc">Precio menor</option><option value="price-desc">Precio mayor</option></select><b>+</b></label></div>, document.querySelector('header'));
 }
-
 function CatalogSkeleton() {
   return <section className="catalog-loading" aria-live="polite" aria-label="Cargando catálogo">
     <div className="skeleton-heading"><span /><span /></div>

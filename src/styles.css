@@ -782,17 +782,32 @@ main { max-width:1180px; margin:auto; padding:74px 5vw; }.section-head { display
   }
 }
 
-/* Place mobile catalog controls directly below the search block without resizing the header. */
-@media (max-width: 700px) {
+/* Keep compact catalog controls in the mobile header flow, below product search. */
+@media (max-width: 800px) {
   header .mobile-header-toolbar-proxy {
-    position: absolute !important;
-    top: calc(100% + 8px) !important;
-    left: 4vw !important;
-    right: 4vw !important;
-    z-index: 25 !important;
+    position: static !important;
+    z-index: auto !important;
+    order: 5 !important;
+    flex: 0 0 100% !important;
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-    width: auto !important;
+    gap: 8px !important;
+    width: 100% !important;
     margin: 0 !important;
+  }
+
+  .mobile-header-toolbar-proxy > button,
+  .mobile-header-toolbar-proxy .mobile-proxy-sort {
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    padding: 0 11px !important;
+    border-radius: 12px !important;
+    font-size: 13px !important;
+    box-shadow: none !important;
+  }
+
+  .mobile-header-toolbar-proxy b {
+    font-size: 18px !important;
   }
 }
